@@ -5,16 +5,23 @@
 # * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
 # * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
 POST 127.0.0.1:8080/greeting/big-content
-Content-Type: text/plain
+Content-Type: application/json
 
-< ./data.json
+< /Users/yemeng1/Documents/codes/java/demopostbigcontent/src/test/data.json
 
 ###
 
 POST 127.0.0.1:8080/greeting/big-content
-Content-Type: text/plain
+Content-Type: application/json
 
-< ./smalldata.json
+< /Users/yemeng1/Documents/codes/java/demopostbigcontent/src/test/smalldata.json
+
+###
+
+POST 127.0.0.1:8080/greeting/big-content-convert
+Content-Type: application/json
+
+< /Users/yemeng1/Documents/codes/java/demopostbigcontent/src/test/smalldata.json
 
 ###
 
